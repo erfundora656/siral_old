@@ -1,0 +1,211 @@
+/* 
+    Document   : styles
+    Created on : 01-may-2013, 11:14:39
+    Author     : dayana
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+.fila_impar{
+  /* impar */    
+}
+
+.fila_par{
+  /* impar */    
+  background-color: #EEE;
+}
+
+.botones_tabs p{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.texto_plato{
+  border-bottom: solid 1px #a60000;
+}
+
+.titulo_dia{
+  font-size: 1.2em;
+}
+
+.precio_ticket{
+    padding: 0 3px 0 5px;
+}
+.menus td{
+  border-left: solid 2px #a60000;
+  border-right: solid 2px #a60000;
+  width: 33%;
+}
+.calendario td{
+  border: solid 1px #a60000;
+  width: 10%;
+  padding: 3px;
+  text-align: center;
+}
+.grafica td{
+  border: none !important;
+  width: auto;
+}
+
+.cell_header{
+  background-color: #a60000;
+}
+
+.cell_bottom{
+  background-color: #a60000;
+}
+
+.title_header{
+  height: 90px;
+  width: 1020px;
+  background: url("../../images/header.jpg") no-repeat scroll right bottom;
+  background-color: #a60000;
+/*  border-radius: 6px;*/
+  float: right;
+}
+
+.botton_bar{
+  width: 1020px;
+  /*background-color: #a60000;*/
+/*  border-radius: 6px;*/
+  /*float: right;*/
+  padding: 5px 0;
+  text-align: center;      
+}
+
+.usuario_nombre_apellidos{
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 12px;  
+  background: #FFF ;
+  border-radius: 3px;
+  color: #000;
+  padding: 0 5px;
+}
+
+.servicios_header{
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 12px;  
+  background: #FFF ;
+  border-radius: 3px;
+  float: right;
+}
+select {
+    background-color: #f6ffe2;  
+    border: 1px solid #a60000;
+    color: #00081E;
+    font-weight: normal;  
+    padding: 3px;
+}
+
+select:disabled {
+    background-color: #FFF;  
+    border: 1px solid #C98F8F;
+    color: #a60000;
+    font-weight: normal;  
+    padding: 3px;
+}
+
+input {
+    background-color: #f6ffe2;  
+    border: 1px solid #a60000;
+    color: #00081E;
+    font-weight: normal;  
+    padding: 3px;
+}
+
+textarea {
+    background-color: #f6ffe2;  
+    border: 1px solid #a60000;
+    color: #00081E;
+    font-weight: normal;  
+    padding: 3px;
+}
+
+input:disabled {
+    background-color: #FFF;  
+    border: 1px solid #C98F8F;
+    color: #a60000;
+    font-weight: normal;  
+    padding: 3px;
+}
+
+.hasDatepicker{
+/*    background-color: #a60000;  
+    border: 1px solid #C98F8F;
+    color: #FFFFFF;*/
+    background-color: #f6ffe2;  
+    border: 1px solid #a60000;
+    color: #00081E;
+    font-weight: bold;  
+    padding: 5px;
+    text-align: right;
+}
+.servicios_header a {
+    text-decoration: none;
+    color: #005;
+}
+
+.ui-button {
+    /*padding: 5px !important;*/
+    /*width: 150px;*/
+}
+
+.ui-button_2 {
+    padding: 5px !important;
+    width: 150px;
+}
+
+#accordion {
+    width: 200px;
+    float: left;
+}
+
+#contenedor {
+    border: 1px solid #DDDDDD;
+    float: left;
+    height: 465px;
+    overflow: auto;
+    position: relative;
+    width: 98%;
+    padding: 5px;
+/*    border-radius: 6px 6px 6px 6px;*/
+    background: url("images/fondo.png") no-repeat scroll right top transparent;
+}
+
+.flexigrid div.fbutton .add {
+	background: url(images/add.png) no-repeat center left;
+}
+
+.flexigrid div.fbutton .delete {
+	background: url(images/close.png) no-repeat center left;
+}
+
+.flexigrid div.fbutton .edit {
+	background: url(images/accept.png) no-repeat center left;
+}
+
+.flexigrid div.fbutton .ficha {
+	background: url(images/ficha.png) no-repeat center left;
+}
+
+.flexigrid div.fbutton .cpass {
+	background: url(images/pass.png) no-repeat center left;
+}
+
+.calendario_home_hoy{
+  border: solid 1px #8A1111;
+  background-color:#8A1111;
+  color:#FFF;
+  font-weight:bold;  
+}

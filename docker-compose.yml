@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  nginx:
+    build:
+      context: siraldock/nginx
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/app
+      - ./siraldock/nginx/logs:/var/log/nginx
+    ports:
+      - ${MY_DOCKER_IP:-127.0.0.1}:${NGINX_HTTP_PORT}:8080
+    links:
+      - php
+
+  php:
+    build:
+      context: siraldock/php
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/app
+    links:
+      - mysql
+
+  mysql:
+    build:
+      context: siraldock/mysql
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - ${MY_DOCKER_IP:-127.0.0.1}:${MYSQL_PORT}:3306
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - database:/var/lib/mysql/
+      - ./siraldock/mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  pma:
+    build: siraldock/pma
+    environment:
+      - PMA_ARBITRARY=1
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    ports:
+      - ${PMA_PORT}:80
+    depends_on:
+      - mysql
+
+volumes:
+  database:
+    driver: local

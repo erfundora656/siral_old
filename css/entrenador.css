@@ -1,0 +1,32 @@
+/* 
+    Document   : entrenador
+    Created on : 16/11/2010, 09:47:26 AM
+    Author     : agust
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.textoError{
+    color: #000000;
+    font-weight: bold;
+}
+
+.textoCorrecto{
+    color: #0000CC;
+    font-weight: bold;
+}
+
+.textoInicial{
+    color: #005702;
+    font-weight: bold;
+}
+
+.mensajeCaja{
+    font-size: 150%;
+    text-align: center;
+}
